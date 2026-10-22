@@ -1,6 +1,15 @@
-# bilibili-archive
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/logo-dark.png">
+  <img alt="Banner" src="docs/images/logo-light.png">
+</picture>
 
-保存 B 站原视频的稿件信息、封面与完整评论区（含楼中楼、评论图片），并提供一个还原 B 站样式的网页用于查阅。
+<p align="center">
+  <a href="LICENSE">
+    <img alt="License: AGPL-3.0" src="https://img.shields.io/github/license/TonyCrane/bilibili-archive?color=FF5531">
+  </a>
+</p>
+
+自建 B 站视频信息、完整评论区（含楼中楼、评论图片、表情等）、弹幕存档网站，包含存档脚本并支持本人锁定稿件提取。
 
 ```
 bilibili-archive/
@@ -101,7 +110,7 @@ npm run preview    # 预览构建结果
 
 本项目为非官方的个人存档工具，与哔哩哔哩（bilibili）无关联。为还原 B 站的界面，仓库中包含以下取自 B 站的素材，其版权与商标归哔哩哔哩（bilibili）所有，不适用本项目的开源许可证：
 
-- `web/public/favicon.ico`：B 站网站图标
+- `web/public/favicon.*`、`web/public/apple-touch-icon.png`：基于 B 站网站图标（小电视）修改，加上了表示存档的时钟角标
 - `web/src/assets/bili-logo.svg`：B 站 Logo
 - `web/public/img/level_*.svg`：用户等级图标
 - `web/src/components/Icon.vue` 中的点赞、点踩、更多、返回、表情图标路径（取自 B 站网页端评论组件）

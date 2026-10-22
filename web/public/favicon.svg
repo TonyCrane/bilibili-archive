@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 基于 B 站网站图标（小电视），右下角加上表示「存档」的时钟角标 -->
+  <defs>
+    <mask id="cut">
+      <rect width="64" height="64" fill="#fff"/>
+      <circle cx="50" cy="50" r="16.5" fill="#000"/>
+    </mask>
+  </defs>
+  <g mask="url(#cut)" fill="none" stroke="#00AEEC" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 4.5 23 11.5M44 4.5 37 11.5" stroke-width="5.5"/>
+    <rect x="4" y="13" width="52" height="40" rx="11" stroke-width="6.5"/>
+    <path d="M20 28v6M40 28v6" stroke-width="6"/>
+  </g>
+  <circle cx="50" cy="50" r="13" fill="#FF6699"/>
+  <path d="M50 43.2V50l4.6 3.2" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
