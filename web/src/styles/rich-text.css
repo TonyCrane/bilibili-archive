@@ -1,0 +1,63 @@
+/* 评论正文中的富文本元素（由 RichText 渲染函数生成，需全局样式） */
+.rich-text .emote {
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  margin: 0 1px;
+  vertical-align: -0.3em;
+  cursor: zoom-in;
+}
+.rich-text .link {
+  color: var(--text_link);
+}
+.rich-text .link:hover {
+  color: var(--brand_blue);
+}
+.rich-text .jump-icon,
+.rich-text .search-icon {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+}
+.rich-text .jump-icon {
+  margin-right: 2px;
+}
+.rich-text .search-icon {
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 1px;
+  vertical-align: 0.4em;
+}
+
+/* 手机端表情略小 */
+.m-reply .rich-text .emote,
+.m-video .rich-text .emote {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -0.25em;
+}
+
+/* 置顶标记 */
+.comment-top-tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 18px;
+  margin-right: 5px;
+  border: 1px solid var(--brand_pink);
+  border-radius: 3px;
+  color: var(--brand_pink);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1;
+  vertical-align: 2px;
+}
+.m-reply .comment-top-tag {
+  width: auto;
+  height: 16px;
+  padding: 0 3px;
+  margin-right: 4px;
+  font-size: 11px;
+}

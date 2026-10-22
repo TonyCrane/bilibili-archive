@@ -1,0 +1,187 @@
+/* 颜色取自 B 站网页端 / App 的设计变量（浅色 + 深色） */
+:root {
+  --text1: #18191c;
+  --text2: #61666d;
+  --text3: #9499a0;
+  --text4: #c9ccd0;
+  --text_white: #ffffff;
+  --text_link: #008ac5;
+  --brand_blue: #00aeec;
+  --brand_blue_thin: #dff6fd;
+  --brand_pink: #ff6699;
+  --brand_pink_thin: #ffecf1;
+  --vip_pink: #fb7299;
+  --m_link: #178bcf;
+  --graph_bg_thick: #e3e5e7;
+  --graph_bg_regular: #f1f2f3;
+  --graph_bg_thin: #f6f7f8;
+  --graph_weak: #e3e5e7;
+  --bg1: #ffffff;
+  --bg1_float: #ffffff;
+  --bg2: #f6f7f8;
+  --bg3: #f1f2f3;
+  --line_regular: #e3e5e7;
+  --line_light: #f1f2f3;
+  --mask: rgba(0, 0, 0, 0.6);
+  --shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  --header-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --warn: #ff7f24;
+  --warn_thin: #fff3e6;
+  --success: #2ac864;
+  --level-filter: none;
+  --font: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --text1: #e7e9eb;
+    --text2: #a2a7ae;
+    --text3: #757a81;
+    --text4: #4c4f53;
+    --text_link: #1f9fd8;
+    --brand_blue: #00aeec;
+    --brand_blue_thin: #0f2a35;
+    --brand_pink: #ff6699;
+    --brand_pink_thin: #3a1f29;
+    --vip_pink: #fb7299;
+    --m_link: #4aa3e0;
+    --graph_bg_thick: #2f3134;
+    --graph_bg_regular: #242628;
+    --graph_bg_thin: #1f2022;
+    --graph_weak: #2f3134;
+    --bg1: #17181a;
+    --bg1_float: #1f2022;
+    --bg2: #1f2022;
+    --bg3: #242628;
+    --line_regular: #2f3134;
+    --line_light: #232527;
+    --mask: rgba(0, 0, 0, 0.75);
+    --shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    --header-shadow: 0 1px 0 #232527;
+    --warn_thin: #3b2a1c;
+    --level-filter: brightness(0.92);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --text1: #e7e9eb;
+  --text2: #a2a7ae;
+  --text3: #757a81;
+  --text4: #4c4f53;
+  --text_link: #1f9fd8;
+  --brand_blue: #00aeec;
+  --brand_blue_thin: #0f2a35;
+  --brand_pink: #ff6699;
+  --brand_pink_thin: #3a1f29;
+  --vip_pink: #fb7299;
+  --m_link: #4aa3e0;
+  --graph_bg_thick: #2f3134;
+  --graph_bg_regular: #242628;
+  --graph_bg_thin: #1f2022;
+  --graph_weak: #2f3134;
+  --bg1: #17181a;
+  --bg1_float: #1f2022;
+  --bg2: #1f2022;
+  --bg3: #242628;
+  --line_regular: #2f3134;
+  --line_light: #232527;
+  --mask: rgba(0, 0, 0, 0.75);
+  --shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  --header-shadow: 0 1px 0 #232527;
+  --warn_thin: #3b2a1c;
+  --level-filter: brightness(0.92);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg1);
+  color: var(--text1);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  border: 0;
+}
+
+mark {
+  background: rgba(255, 102, 153, 0.22);
+  color: inherit;
+  border-radius: 2px;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.25s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateX(100%);
+}

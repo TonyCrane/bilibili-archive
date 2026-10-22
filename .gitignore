@@ -1,0 +1,23 @@
+# 登录凭据与本地站点配置
+cookie.txt
+.env
+.env.local
+
+# 依赖与构建产物
+node_modules/
+web/dist/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+
+# 抓取中断留下的临时文件
+*.tmp
+*.part
+
+# 存档文件
+archive/*
+!archive/.gitkeep
+
+.DS_Store
